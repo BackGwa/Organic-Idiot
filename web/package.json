@@ -1,0 +1,19 @@
+{
+  "name": "organic-idiot-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@lucide/svelte": "^1.52.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "pretendard": "^1.3.9",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.7.6",
+    "typescript": "~6",
+    "vite": "^8.3.3"
+  }
+}
