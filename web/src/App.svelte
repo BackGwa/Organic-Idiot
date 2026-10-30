@@ -148,7 +148,7 @@
       </div>
 
       {#if live.model}
-        <img class="paper" src="/idiot.png?round={live.model.round}" alt="멍청이가 그린 {idiotKeyword?.label}" />
+        <img class="paper" src="/idiot.png?drawn={live.model.drawnAt}" alt="멍청이가 그린 {idiotKeyword?.label}" />
       {:else}
         <p class="paper empty">아직 아무것도 몰라요.<br />그림이 모이면 배우기 시작해요.</p>
       {/if}

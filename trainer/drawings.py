@@ -37,9 +37,10 @@ class DrawingSource:
         self.images: list[np.ndarray] = []
         self.labels: list[int] = []
 
-    def load_new(self):
+    # 새로 읽은 그림 수 반환
+    def load_new(self) -> int:
         if not self.database.exists():
-            return
+            return 0
         connection = sqlite3.connect(f"file:{self.database.as_posix()}?mode=ro", uri=True)
         try:
             rows = connection.execute(
@@ -57,3 +58,4 @@ class DrawingSource:
                 continue
             self.images.append(rasterize(json.loads(strokes_json)))
             self.labels.append(label)
+        return len(rows)

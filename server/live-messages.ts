@@ -6,6 +6,8 @@ export interface ModelStatus {
   keywordId: string;
   trainedDrawings: number;
   trainedAt: string;
+  // 학습 없이 다시 그려도 화면이 새 그림을 받도록 쓰는 값
+  drawnAt: string;
 }
 
 export type LiveMessage =
